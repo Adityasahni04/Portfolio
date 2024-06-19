@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="first.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dheereshagrwal/colored-icons@1.7.5/src/app/ci.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+<body ng-app="myapp" ng-controller="myCtrl">
+    <div class="fullbox">
+        <div class="upperbox">
+            <div class="leftbox">
+                <div class="image-container">
+                    <img src="image.png" alt="My image">
+                    <!-- <img src="https://res.cloudinary.com/adityacprtm/image/upload/v1659200380/production/small_profile_6832daf094.jpg" alt="Your Image"> -->
+                </div>
+                <div class="details">
+                    <h2 style="color: #fcfcfc; font-family: Poppins, sans-serif;font-weight: 600;">Aditya
+                        <span class="weight--400">Sahni </span></h2>
+                    <p>Backend Dev | SRE | Cloud Enthusiast</p>
+                    <div class="social-handles">  
+                        <a href="https://github.com/Adityasahni04" class="social-icon"><i class="fab fa-github"></i></a>   
+                        <a href="https://www.linkedin.com/in/aditya-sahni-7687ab311/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://leetcode.com/u/Aditya8988/" class="social-icon" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-code"></i></a>
+                    </div>                    
+                </div>
+            </div>            
+            <div class="rightbox">
+                <div class="left-side">
+                    <div class="leftsection">
+                        <div>
+                            <span class="label1">EMAIL</span>
+                            <br>
+                            <span class="content">sahniaditya951@gmail.com</span>
+                        </div>
+                        <div>
+                            <span class="label1">LOCATION</span>
+                            <br>
+                            <span class="content">Dehradun <i style="font-size:12px" class="fa">&#xf14e;</i></span>
+                        </div>
+                    </div>
+                    <div class="rightsection">
+                        <div>
+                            <span class="label1">CV</span>
+                            <br>
+                            <a href="https://drive.google.com/file/d/1KZk86uHZP2OmJFI1p15WBfDcug5DW_Ap/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="content">Download <i style="font-size: 12px; color: white; font-weight: 550;" class="fa fa-download custom-download"></i></a>
+                        </div>
+                        <div>
+                            <span class="label1">STATUS</span>
+                            <br>
+                            <span class="content"> 🍉 </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    <div class="contentbox" >
+        <p ng-bind-html="aboutMeContent"></p>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <div class="menu-item ">
+                <div class="icon" ng-click="aboutMe()"><i class="fas fa-user"></i></div>
+                <div class="label" ng-click="aboutMe()" >ABOUT</div>
+            </div>
+            <div class="menu-item">
+                <div class="icon"ng-click="myresume()"><i class="fas fa-file-alt"></i></div>
+                <div class="label" ng-click="myresume()">RESUME</div>
+            </div>
+            <div class="menu-item">
+                <div class="icon" ng-click="myportfolio()"><i class="fas fa-briefcase"></i></div>
+                <div class="label" ng-click="myportfolio()">PROJECTS</div>
+            </div>
+            <div class="menu-item">
+                <div class="icon" ng-click="myBlog()"><i class='fas fa-book-open'></i></div>
+                <div class="label" ng-click="myBlog()">BLOG</div>
+            </div>
+            <div class="menu-item">
+                <div class="icon" ng-click="myContact()"><i class="fas fa-envelope"></i></div>
+                <div class="label" ng-click="myContact()">CONTACT</div>
+        </div>
+    </div>
+    </div>
+    <script src="first.js"></script>
+</body>
+</html>
