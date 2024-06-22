@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const path = require('path');
+const serverless = require('serverless-http');
 require('dotenv').config();
 
 const app = express();
@@ -47,8 +48,4 @@ app.post("/submit-form", async (req, res) => {
         res.status(500).send("An error occurred while processing your request.");
     }
 });
-
-module.exports.handler = async (event, context) => {
-    // Use express's built-in middleware to start the function
-    await app(event, context);
-};
+module.exports.handler = serverless(app);
