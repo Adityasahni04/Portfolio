@@ -42,4 +42,4 @@ app.post("/submit-form", async (req, res) => {
     }
 });
 
-module.exports.handler = app;
+module.exports = { handler: app };
