@@ -47,6 +47,6 @@ app.post("/submit-form", async (req, res) => {
         console.error("Error sending email:", error);
         res.status(500).send("An error occurred while processing your request.");
     }
-});
+});//
 
 module.exports.handler = serverless(app);
