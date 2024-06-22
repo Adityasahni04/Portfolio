@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 require('dotenv').config();
-const url=process.env.MongoURL;
+const url='mongodb+srv://sahniaditya951:aditya2004@cluster0.febxnpq.mongodb.net/';
 mongoose.connect(url);
 const db=mongoose.connection;
 db.on('connected',()=>{
