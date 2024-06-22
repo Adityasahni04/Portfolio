@@ -42,4 +42,7 @@ app.post("/submit-form", async (req, res) => {
     }
 });
 
-module.exports = { handler: app };
+module.exports.handler = async (event, context) => {
+    // Use express's built-in middleware to start the function
+    await app(event, context);
+};
