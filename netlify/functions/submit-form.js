@@ -9,6 +9,12 @@ const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Example middleware with logging
+app.use((req, res, next) => {
+    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+    next(); // Call next to proceed to the next middleware
+});
+
 app.post("/submit-form", async (req, res) => {
     try {
         const { fullname, email, message } = req.body;
