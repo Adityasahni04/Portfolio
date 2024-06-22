@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post("/submit-form", async (req, res) => {
     try {
-        const { fullName, email, message } = req.body;
+        const { fullname, email, message } = req.body;
 
         // Set up nodemailer transporter
         const transporter = nodemailer.createTransport({
@@ -27,7 +27,7 @@ app.post("/submit-form", async (req, res) => {
             from: process.env.EMAIL_USER,
             to: 'aditya123sahniaz@gmail.com',
             subject: 'New Form Submission',
-            text: `You have a new form submission:\n\nFull Name: ${fullName}\nEmail: ${email}\nMessage: ${message}`
+            text: `You have a new form submission:\n\nFull Name: ${fullname}\nEmail: ${email}\nMessage: ${message}`
         };
 
         // Send email
