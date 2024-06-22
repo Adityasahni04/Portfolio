@@ -10,7 +10,8 @@ exports.handler = async (event, context) => {
     }
 
     try {
-        const { fullName, email, message } = JSON.parse(event.body);
+        const body = JSON.parse(event.body || '{}'); // Handle empty body gracefully
+        const { fullName, email, message } = body;
 
         // Set up nodemailer transporter
         const transporter = nodemailer.createTransport({
