@@ -1,17 +1,17 @@
+const express = require('express');
+const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const path = require('path');
 require('dotenv').config();
 
-exports.handler = async (event, context) => {
-    if (event.httpMethod !== 'POST') {
-        return {
-            statusCode: 405,
-            body: 'Method Not Allowed',
-        };
-    }
+const app = express();
+const PORT = process.env.PORT || 3000;
 
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.post("/submit-form", async (req, res) => {
     try {
-        const body = JSON.parse(event.body || '{}'); // Handle empty body gracefully
-        const { fullName, email, message } = body;
+        const { fullName, email, message } = req.body;
 
         // Set up nodemailer transporter
         const transporter = nodemailer.createTransport({
@@ -33,16 +33,15 @@ exports.handler = async (event, context) => {
         // Send email
         await transporter.sendMail(mailOptions);
 
-        return {
-            statusCode: 200,
-            body: JSON.stringify({ message: 'Email sent successfully' }),
-        };
+        console.log("Email sent successfully");
+        res.sendFile(path.join(__dirname, "datasaved.html"));
 
     } catch (error) {
         console.error("Error sending email:", error);
-        return {
-            statusCode: 500,
-            body: JSON.stringify({ error: 'An error occurred while processing your request.' }),
-        };
+        return res.status(500).send("An error occurred while processing your request.");
     }
-};
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
