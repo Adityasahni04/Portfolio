@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Example middleware with logging
 app.use((req, res, next) => {
     console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
-    next(); // Call next to proceed to the next middleware
+    next();
 });
 
 app.post("/submit-form", async (req, res) => {
@@ -48,4 +48,5 @@ app.post("/submit-form", async (req, res) => {
         res.status(500).send("An error occurred while processing your request.");
     }
 });
+
 module.exports.handler = serverless(app);
