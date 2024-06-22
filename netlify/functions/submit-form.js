@@ -34,11 +34,11 @@ app.post("/submit-form", async (req, res) => {
         await transporter.sendMail(mailOptions);
 
         console.log("Email sent successfully");
-        res.sendFile(path.join(__dirname, "datasaved.html"));
+        res.status(200).sendFile(path.join(__dirname, "datasaved.html"));
 
     } catch (error) {
         console.error("Error sending email:", error);
-        return res.status(500).send("An error occurred while processing your request.");
+        res.status(500).send("An error occurred while processing your request.");
     }
 });
 
