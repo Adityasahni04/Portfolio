@@ -420,27 +420,82 @@ h1 {
     margin-bottom: 5px;
 }
 .skills-container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill-category-box {
     background-color: #23262b;
     border-radius: 10px;
     padding: 20px;
-    width:95%;
-    border-color: #23262b;
-    border: 2px solid #5d5f60;;
+    border: 1px solid #5d5f60;
 }
+
+.skill-category-box h3 {
+    background-color: #268cf8;
+    color: #fff;
+    padding: 10px;
+    margin: -20px -20px 20px -20px;
+    border-radius: 10px 10px 0 0;
+    text-align: left;
+}
+
 .skill-level {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 20px;
     margin-bottom: 10px;
-    padding: 2px 20px;
+    padding: 10px;
+    background-color: #292c31;
+    border-radius: 20px;
+    position: relative;
     color: #fff;
-    z-index: 99;
-    background: linear-gradient(90deg,#007bff  50%, #444 50%);
 }
 
+.skill-name {
+    width: 25%;
+}
 
+.skill-bar-container {
+    width: 70%;
+    height: 20px;
+    background-color: #444;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-bar {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.skill-percentage {
+    width: 15%;
+    text-align: right;
+}
+
+.aws { background-color: #007bff; width: 60%; }
+.javascript { background-color:#007bff; width: 55%; }
+.java { background-color: #007BFF; width: 57%; }
+.sql { background-color: #007bff; width: 70%; }
+.html { background-color: #007bff; width: 65%; }
+.css { background-color: #1E90FF; width: 60%; }
+.angular { background-color: #007bff; width: 40%; }
+.node { background-color: #007bff; width: 60%; }
+.MongoDB { background-color: #007bff; width: 40%; }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+}
 
 
 @media (max-width: 1200px) {

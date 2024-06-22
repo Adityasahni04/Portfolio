@@ -32,45 +32,86 @@ app.controller('myCtrl', function($scope, $sce) {
                 </ul>
             </div>
             <div class="job">
-                <h3>Lion Parcel <span>as Site Reliability Engineer (SRE)</span></h3>
-                <p><span>Jan 2021 - May 2024</span></p>
-                <ul>
-                    <li>Provide technical support and assistance to developers, addressing their problems and needs, ensuring smooth development processes.</li>
-                    <li>Utilize JIRA for project management and issue tracking, ensuring efficient collaboration and task management.</li>
-                    <li>Develop and maintain an automated CI/CD pipeline using Jenkins, enabling seamless code deployment for every release.</li>
-                    <li>Create and maintain deployment processes for mobile apps on Android and iOS platforms, ensuring efficient and reliable distribution.</li>
-                    <li>Provision infrastructure, servers, and services using Terraform, enabling scalable and consistent deployment and management.</li>
-                    <li>Set up and monitoring, tracing, and logging tools such as ELK, Grafana, and Datadog, ensuring comprehensive visibility into system performance and issues.</li>
-                    <li>Implement monitoring alerts for services, databases, and logs, reducing the occurrence of errors in production environments.</li>
-                </ul>
+          <h3>CSA Hackathon 3.0<span> as Group Lead</span></h3>
+           <p><span>April 2024</span></p>
+              <ul>
+             <li>Led a team in a college hackathon with over 300 participants, focusing on web authentication and security, despite having no prior expertise in the field.</li>
+            <li>Collaborated closely with team members to conduct thorough research on web authentication and security topics.</li>
+            <li>Prepared and delivered a strong presentation, successfully advancing through the first round of the competition.</li>
+           <li>Managed team dynamics and provided support to ensure smooth collaboration and effective problem-solving under pressure.</li>
+            <li>Gained valuable experience in project management, teamwork, and technical research, contributing to personal and professional growth.</li>
+       </ul>
+    </ul>
             </div>
         </div>
     </div>
     <h2 style="color:white">Skills</h2>
     <div class="skills-container">
-        <div class="skill-level">
-            <span>Google Cloud Platform:</span>
-        </div>
-        <div class="skill-level">
-            <span>Amazon Web Service:</span>
-        </div>
-        <div class="skill-level">
-            <span>Linux Environment:</span>
-        </div>
-        <div class="skill-level">
-            <span>Network Administrator:</span>
-        </div>
-        <div class="skill-level">
-            <span>Infrastructure as Code:</span>
-        </div>
-        <div class="skill-level">
-            <span>Automation and scripting:</span>
-        </div>
-        <div class="skill-level">
-            <span>CICD:</span>
-        </div>
-        <div class="skill-level">
-            <span>Git:</span>
+        <div class="skill-category-box">
+            <h3>Technical Skills</h3>
+             <div class="skill-level">
+                <div class="skill-name">AWS</div>
+                <div class="skill-bar-container">
+                    <div class="skill-bar aws"></div>
+                </div>
+                <div class="skill-percentage">60%</div>
+            </div>
+            <div class="skill-level">
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-bar-container">
+                    <div class="skill-bar javascript"></div>
+                </div>
+                <div class="skill-percentage">55%</div>
+            </div>
+            <div class="skill-level">
+                <div class="skill-name">Java</div>
+                <div class="skill-bar-container">
+                    <div class="skill-bar java"></div>
+                </div>
+                <div class="skill-percentage">57%</div>
+            </div>
+            <div class="skill-level">
+                <div class="skill-name">SQL</div>
+                <div class="skill-bar-container">
+                    <div class="skill-bar sql"></div>
+                </div>
+                <div class="skill-percentage">67%</div>
+            </div>
+            <div class="skill-level">
+                <div class="skill-name">HTML</div>
+                <div class="skill-bar-container">
+                    <div class="skill-bar html"></div>
+                </div>
+                <div class="skill-percentage">65%</div>
+            </div>
+            <div class="skill-level">
+                <div class="skill-name">CSS</div>
+                <div class="skill-bar-container">
+                    <div class="skill-bar css"></div>
+                </div>
+                <div class="skill-percentage">60%</div>
+            </div>
+            <div class="skill-level">
+                <div class="skill-name">Angular</div>
+                <div class="skill-bar-container">
+                    <div class="skill-bar angular"></div>
+                </div>
+                <div class="skill-percentage">45%</div>
+            </div>
+            <div class="skill-level">
+                <div class="skill-name">Node.js</div>
+                <div class="skill-bar-container">
+                    <div class="skill-bar node"></div>
+                </div>
+                <div class="skill-percentage">60%</div>
+            </div>
+            <div class="skill-level">
+                <div class="skill-name">MongoDB</div>
+                <div class="skill-bar-container">
+                    <div class="skill-bar MongoDB"></div>
+                </div>
+                <div class="skill-percentage">45%</div>
+            </div>
         </div>
     </div>
         `;
@@ -132,47 +173,8 @@ app.controller('myCtrl', function($scope, $sce) {
     $scope.myBlog = function() {
         var blogHtml = `
             <h1 style="color: #fcfcfc;font-weight: 600;line-height: 1.3;">BLOG</h1>
-            <div class="line"></div>
-            <br>
-           <div class="projects-container">
-    <div class="project-box">
-        <img src="https://img.freepik.com/free-photo/global-business-internet-network-connection-iot-internet-things-business-intelligence-concept-busines-global-network-futuristic-technology-background-ai-generative_1258-176762.jpg" alt="Project 1 Image" class="project-image">
-        <div class="project-content">
-            <div class="project-title">Blog 1</div>
-            <div class="project-buttons">
-                <button class="btn-view"><a href="notfound.html">Read More</a></button>
-            </div>
-        </div>
-    </div>
-    <div class="project-box">
-        <img src="https://img.freepik.com/free-photo/global-business-internet-network-connection-iot-internet-things-business-intelligence-concept-busines-global-network-futuristic-technology-background-ai-generative_1258-176762.jpg" alt="Project 2 Image" class="project-image">
-        <div class="project-content">
-            <div class="project-title">Blog 2</div>
-            <div class="project-buttons">
-                <button class="btn-view"><a href="notfound.html">Read More</a></button>
-            </div>
-        </div>
-    </div>
-    <div class="project-box">
-        <img src="https://img.freepik.com/free-photo/global-business-internet-network-connection-iot-internet-things-business-intelligence-concept-busines-global-network-futuristic-technology-background-ai-generative_1258-176762.jpg" alt="Project 3 Image" class="project-image">
-        <div class="project-content">
-            <div class="project-title">Blog 3</div>
-            <div class="project-buttons">
-                <button class="btn-view"><a href="notfound.html">Read More</a></button>
-            </div>
-        </div>
-    </div>
-    <div class="project-box">
-        <img src="https://img.freepik.com/free-photo/global-business-internet-network-connection-iot-internet-things-business-intelligence-concept-busines-global-network-futuristic-technology-background-ai-generative_1258-176762.jpg" alt="Project 4 Image" class="project-image">
-        <div class="project-content">
-            <div class="project-title">Blog 4</div>
-            <div class="project-buttons">
-                <button class="btn-view"><a href="notfound.html">Read More</a></button>
-            </div>
-        </div>
-    </div>
-</div>
-        `;
+        <p>No blogs right now, will be published in the future.</p>
+    </div>        `;
         $scope.aboutMeContent = $sce.trustAsHtml(blogHtml);
     };
 
