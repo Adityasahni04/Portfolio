@@ -185,13 +185,27 @@ app.controller('myCtrl', function($scope, $sce) {
             <br>
             <p>Open for opportunities: <b>Yes</b></p>
             <h2 style="color: #fcfcfc;font-size: 1.5rem;font-weight: 600;line-height: 1.3;">Contact Form</h2>
-            <form class="myform" method="POST" data-netlify="true" data-netlify-honeypot="bot-field"action="/datasaved/" >
-                <input type="text" placeholder="Full name" class="inputbox" name="fullname">
-                <input type="text" placeholder="Email address" class="inputbox" name="email">
-                <input type="text" placeholder="Your message" class="inputbox1" name="message" >
-                <br>
-                <button class="submit-btn"><i class="fas fa-paper-plane"></i> Submit</button>            
-            </form>
+           <!-- This is the HTML form for collecting user data and submitting it via Netlify -->
+<form class="myform" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/datasaved/">
+    
+    <!-- Invisible honeypot field to catch bots -->
+    <input type="hidden" name="bot-field">
+
+    <!-- User input for full name -->
+    <input type="text" placeholder="Full name" class="inputbox" name="fullname" required>
+
+    <!-- User input for email address -->
+    <input type="email" placeholder="Email address" class="inputbox" name="email" required>
+
+    <!-- User input for message -->
+    <input type="text" placeholder="Your message" class="inputbox1" name="message" required>
+    
+    <br>
+    
+    <!-- Submit button with an icon -->
+    <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Submit</button>
+</form>
+
         `;
         $scope.aboutMeContent = $sce.trustAsHtml(contactHtml);
     };
