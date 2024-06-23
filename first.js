@@ -185,7 +185,7 @@ app.controller('myCtrl', function($scope, $sce) {
             <br>
             <p>Open for opportunities: <b>Yes</b></p>
             <h2 style="color: #fcfcfc;font-size: 1.5rem;font-weight: 600;line-height: 1.3;">Contact Form</h2>
-            <form class="myform" action="/.netlify/functions/submit-form" method="POST">
+            <form class="myform" method="POST" data-netlify="true" data-netlify-honeypot="bot-field"action="/datasaved/" >
                 <input type="text" placeholder="Full name" class="inputbox" name="fullname">
                 <input type="text" placeholder="Email address" class="inputbox" name="email">
                 <input type="text" placeholder="Your message" class="inputbox1" name="message" >
