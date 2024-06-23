@@ -186,8 +186,7 @@ app.controller('myCtrl', function($scope, $sce) {
             <p>Open for opportunities: <b>Yes</b></p>
             <h2 style="color: #fcfcfc;font-size: 1.5rem;font-weight: 600;line-height: 1.3;">Contact Form</h2>
            <!-- This is the HTML form for collecting user data and submitting it via Netlify -->
-<form class="myform" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/datasaved/">
-    
+<form class="myform" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">    
     <!-- Invisible honeypot field to catch bots -->
     <input type="hidden" name="bot-field">
 
