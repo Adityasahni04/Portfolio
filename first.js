@@ -180,29 +180,24 @@ app.controller('myCtrl', function($scope, $sce) {
 
     $scope.myContact = function() {
         var contactHtml = `
-            <h1 style="color: #fcfcfc;font-weight: 600;line-height: 1.3;">CONTACT</h1>
-<div class="line"></div>
-<br>
-<p>Open for opportunities: <b>Yes</b></p>
-<h2 style="color: #fcfcfc;font-size: 1.5rem;font-weight: 600;line-height: 1.3;">Contact Form</h2>
-<!-- This is the HTML form for collecting user data and submitting it via Formspree -->
-<form action="https://formspree.io/f/mjkbbwqe" method="POST" class="myform">
-    <!-- User input for full name -->
-    <input type="text" placeholder="Full name" class="inputbox" name="name" required>
-    
-    <!-- User input for email address -->
-    <input type="email" placeholder="Email address" class="inputbox" name="email" required>
-    
-    <!-- User input for message -->
-    <input type="text" placeholder="Your message" class="inputbox1" name="message" required>
-    
-    <br>
-    
-    <!-- Submit button with an icon -->
-    <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Submit</button>
-</form>
-
-        `;
+        <h1 style="color: #fcfcfc;font-weight: 600;line-height: 1.3;">CONTACT</h1>
+        <div class="line"></div>
+        <br>
+        <p>Open for opportunities: <b>Yes</b></p>
+        <h2 style="color: #fcfcfc;font-size: 1.5rem;font-weight: 600;line-height: 1.3;">Contact Form</h2>
+        <!-- This is the HTML form for collecting user data and submitting it via Formspree -->
+        <form action="https://formspree.io/f/mjkbbwqe" method="POST" class="myform">
+            <!-- User input for full name -->
+            <input type="text" placeholder="Full name" class="inputbox" name="name" required>  
+            <!-- User input for email address -->
+            <input type="email" placeholder="Email address" class="inputbox" name="email" required>
+            <!-- User input for message -->
+            <input type="text" placeholder="Your message" class="inputbox1" name="message" required>
+            <br>
+            <!-- Submit button with an icon -->
+            <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Submit</button>
+        </form>
+    `;    
         $scope.aboutMeContent = $sce.trustAsHtml(contactHtml);
     };
     
