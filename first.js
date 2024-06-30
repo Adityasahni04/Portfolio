@@ -21,8 +21,8 @@ app.controller('myCtrl', function($scope, $sce) {
             <h1 style="color: #fcfcfc;font-weight: 600;line-height: 1.3;">Resume</h1>
             <div class="line"></div>
             <br>
+              <h2 style="color: white; font-weight: 600;">Experience</h2>
              <div class="experience">
-            <h2>Experience</h2>
             <div class="job">
                 <h3>DIGIIWEE <span>as Backend Intern</span></h3>
                 <p><span>June 2024 - July  2024</span></p>
